@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641228, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -67,9 +67,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -396,16 +393,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bottomRooms:
-  - {fileID: 8587757417618940169, guid: 836df9fea4d3741399c06e5c04bc69b1, type: 3}
-  - {fileID: 2481854765486437728, guid: d27a69283b3cb459483d2bd890f34193, type: 3}
-  topRooms:
   - {fileID: 6138135873079755073, guid: 96d28800494e749e5b025f2a7a05938e, type: 3}
   - {fileID: 2481854765486437728, guid: d27a69283b3cb459483d2bd890f34193, type: 3}
+  topRooms:
+  - {fileID: 8587757417618940169, guid: 836df9fea4d3741399c06e5c04bc69b1, type: 3}
+  - {fileID: 2481854765486437728, guid: d27a69283b3cb459483d2bd890f34193, type: 3}
   leftRooms:
-  - {fileID: 8270659017715009263, guid: 010cbf4efcfcb4160910dc21409fecfb, type: 3}
+  - {fileID: 24060692934579182, guid: a1bc596b44f8d42b5917f5cddf697842, type: 3}
   - {fileID: 337077025667784578, guid: 95f3a90141a9546749752c4a7dd7fd2d, type: 3}
   rightRooms:
-  - {fileID: 24060692934579182, guid: a1bc596b44f8d42b5917f5cddf697842, type: 3}
+  - {fileID: 8270659017715009263, guid: 010cbf4efcfcb4160910dc21409fecfb, type: 3}
   - {fileID: 337077025667784578, guid: 95f3a90141a9546749752c4a7dd7fd2d, type: 3}
 --- !u!4 &2127994703
 Transform:
@@ -428,5 +425,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 525602289}
   - {fileID: 2096782826}
-  - {fileID: 825031790}
   - {fileID: 2127994703}
+  - {fileID: 825031790}

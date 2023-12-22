@@ -12,18 +12,19 @@ public class RoomSpawner : MonoBehaviour
 
     private RoomTemplates templates;
     private int rand;
-    private bool spawned = false;
+    bool spawned = false;
 
     // Start is called before the first frame update
     void Start()
     {
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-        Invoke("Spawn", 0.1f);
+        Invoke("Spawn", 0.5f);
     }
 
     void Spawn()
     {
         if(spawned == false) {
+            
             if (openingDirection == 1)
             {
                 // Need to spawn a room with a BOTTOM door
@@ -39,23 +40,24 @@ public class RoomSpawner : MonoBehaviour
             else if (openingDirection == 3)
             {
                 // Need to spawn a room with a LEFT door.
-                rand = Random.Range(0, templates.leftRooms.Length);
-                Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);
+                //rand = Random.Range(0, templates.leftRooms.Length);
+                //Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);
             }
             else if (openingDirection == 4)
             {
                 // Need to spawn a room with a RIGHT door.
-                rand = Random.Range(0, templates.rightRooms.Length);
-                Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
+               // rand = Random.Range(0, templates.rightRooms.Length);
+                //Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
             }
             spawned = true;
         }
         
     }
 
-    void onTriggerEnter(Collider other)
+    void OnTriggerStay2D(Collider2D other)
     {
-        if(other.CompareTag("SpawnPoint") && other.GetComponent<RoomSpawner>().spawned == true)
+        print("COLLID!");
+        if (other.CompareTag("SpawnPoint") && other.GetComponent<RoomSpawner>().spawned == true)
         {
             Destroy(gameObject);
         }
