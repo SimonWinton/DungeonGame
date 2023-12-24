@@ -18,12 +18,14 @@ public class RoomSpawner : MonoBehaviour
     void Start()
     {
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-        Invoke("Spawn", 0.1f);
+        Invoke("Spawn", 0.3f);
     }
 
     void Spawn()
     {
-        if(spawned == false) {
+        if (spawned == false)
+        {
+            spawned = true;
             if (openingDirection == 1)
             {
                 // Need to spawn a room with a BOTTOM door
@@ -48,16 +50,19 @@ public class RoomSpawner : MonoBehaviour
                 rand = Random.Range(0, templates.rightRooms.Length);
                 Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
             }
-            spawned = true;
+
         }
-        
+
     }
 
-    void onTriggerEnter(Collider other)
+    //Upon collision with another GameObject, this GameObject will reverse direction
+    private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("SpawnPoint") && other.GetComponent<RoomSpawner>().spawned == true)
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Destroy(gameObject);
     }
 }
