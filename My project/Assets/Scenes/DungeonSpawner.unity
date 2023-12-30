@@ -215,7 +215,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &825031790
+--- !u!1001 &1567593230
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -223,6 +223,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 104509189926689883, guid: f0a1dffa57e39414c843cfbde5bf0dc1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 314694744408521448, guid: f0a1dffa57e39414c843cfbde5bf0dc1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -263,11 +267,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 364691663252978542, guid: f0a1dffa57e39414c843cfbde5bf0dc1, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5051264643429109530, guid: f0a1dffa57e39414c843cfbde5bf0dc1, type: 3}
       propertyPath: m_Name
       value: tlbr
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4370826387925232958, guid: f0a1dffa57e39414c843cfbde5bf0dc1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -398,31 +407,57 @@ MonoBehaviour:
   bottomRooms:
   - {fileID: 2481854765486437728, guid: d27a69283b3cb459483d2bd890f34193, type: 3}
   - {fileID: 8587757417618940169, guid: e178d48eedf2849f6adaf97f30e8a1e4, type: 3}
+  - {fileID: 2449269828999033647, guid: b565d4914ed9e496aac881b324cbe6eb, type: 3}
+  - {fileID: 2695084779351240827, guid: 021234512e42149ffbc0857b8f7a4109, type: 3}
+  - {fileID: 1866463783311523020, guid: 5fd871568efbd4103a9eb5cf62bb003d, type: 3}
   - {fileID: 8587757417618940169, guid: e178d48eedf2849f6adaf97f30e8a1e4, type: 3}
   - {fileID: 2449269828999033647, guid: b565d4914ed9e496aac881b324cbe6eb, type: 3}
   - {fileID: 2695084779351240827, guid: 021234512e42149ffbc0857b8f7a4109, type: 3}
   - {fileID: 1866463783311523020, guid: 5fd871568efbd4103a9eb5cf62bb003d, type: 3}
+  - {fileID: 8587757417618940169, guid: 0d11bca5683da4f5fa21a73b0829da16, type: 3}
+  - {fileID: 8587757417618940169, guid: e178d48eedf2849f6adaf97f30e8a1e4, type: 3}
   topRooms:
   - {fileID: 8587757417618940169, guid: 836df9fea4d3741399c06e5c04bc69b1, type: 3}
   - {fileID: 2481854765486437728, guid: d27a69283b3cb459483d2bd890f34193, type: 3}
-  - {fileID: 8587757417618940169, guid: 836df9fea4d3741399c06e5c04bc69b1, type: 3}
   - {fileID: 2449269828999033647, guid: b565d4914ed9e496aac881b324cbe6eb, type: 3}
   - {fileID: 2874792566191655663, guid: 306b2fc00d96244639b3e09cec994a35, type: 3}
   - {fileID: 2695084779351240827, guid: 021234512e42149ffbc0857b8f7a4109, type: 3}
+  - {fileID: 8587757417618940169, guid: 836df9fea4d3741399c06e5c04bc69b1, type: 3}
+  - {fileID: 8587757417618940169, guid: ffaad30aea7ce48b9bb00174f8744272, type: 3}
+  - {fileID: 2449269828999033647, guid: b565d4914ed9e496aac881b324cbe6eb, type: 3}
+  - {fileID: 2874792566191655663, guid: 306b2fc00d96244639b3e09cec994a35, type: 3}
+  - {fileID: 2695084779351240827, guid: 021234512e42149ffbc0857b8f7a4109, type: 3}
+  - {fileID: 8587757417618940169, guid: 836df9fea4d3741399c06e5c04bc69b1, type: 3}
   leftRooms:
   - {fileID: 2481854765486437728, guid: d41de61ee4497456bb5d7ce2c67c255f, type: 3}
   - {fileID: 8587757417618940169, guid: 80647dc915082455dbb9571338656e4c, type: 3}
-  - {fileID: 8587757417618940169, guid: 80647dc915082455dbb9571338656e4c, type: 3}
   - {fileID: 2449269828999033647, guid: b565d4914ed9e496aac881b324cbe6eb, type: 3}
   - {fileID: 2874792566191655663, guid: 306b2fc00d96244639b3e09cec994a35, type: 3}
   - {fileID: 1866463783311523020, guid: 5fd871568efbd4103a9eb5cf62bb003d, type: 3}
+  - {fileID: 8587757417618940169, guid: 80647dc915082455dbb9571338656e4c, type: 3}
+  - {fileID: 8587757417618940169, guid: 798ce437f98a64f5186008e4dce5ae7d, type: 3}
+  - {fileID: 2449269828999033647, guid: b565d4914ed9e496aac881b324cbe6eb, type: 3}
+  - {fileID: 2874792566191655663, guid: 306b2fc00d96244639b3e09cec994a35, type: 3}
+  - {fileID: 1866463783311523020, guid: 5fd871568efbd4103a9eb5cf62bb003d, type: 3}
+  - {fileID: 8587757417618940169, guid: 80647dc915082455dbb9571338656e4c, type: 3}
   rightRooms:
   - {fileID: 2481854765486437728, guid: d41de61ee4497456bb5d7ce2c67c255f, type: 3}
-  - {fileID: 8587757417618940169, guid: 0efece13c9cda4fe4b7fd077ae9caf15, type: 3}
   - {fileID: 8587757417618940169, guid: 0efece13c9cda4fe4b7fd077ae9caf15, type: 3}
   - {fileID: 2874792566191655663, guid: 306b2fc00d96244639b3e09cec994a35, type: 3}
   - {fileID: 2695084779351240827, guid: 021234512e42149ffbc0857b8f7a4109, type: 3}
   - {fileID: 1866463783311523020, guid: 5fd871568efbd4103a9eb5cf62bb003d, type: 3}
+  - {fileID: 8587757417618940169, guid: 0efece13c9cda4fe4b7fd077ae9caf15, type: 3}
+  - {fileID: 8587757417618940169, guid: 0d4566125c11f47cbab55e03f68522ab, type: 3}
+  - {fileID: 2874792566191655663, guid: 306b2fc00d96244639b3e09cec994a35, type: 3}
+  - {fileID: 2695084779351240827, guid: 021234512e42149ffbc0857b8f7a4109, type: 3}
+  - {fileID: 1866463783311523020, guid: 5fd871568efbd4103a9eb5cf62bb003d, type: 3}
+  - {fileID: 8587757417618940169, guid: 0efece13c9cda4fe4b7fd077ae9caf15, type: 3}
+  topLeftRoom: {fileID: 2481854765486437728, guid: f985c2380d1c64d9a9cd716304ba4964, type: 3}
+  bottomLeftRoom: {fileID: 2481854765486437728, guid: e7a4c0fc8b90b461384452c5c12e2379, type: 3}
+  topRightRoom: {fileID: 2481854765486437728, guid: 7c7d912f7bc7d43fe9e12d2f385f23dc, type: 3}
+  bottomRightRoom: {fileID: 2481854765486437728, guid: a6215ed3804464031a0da964fc254b8e, type: 3}
+  horLineRoom: {fileID: 2481854765486437728, guid: d41de61ee4497456bb5d7ce2c67c255f, type: 3}
+  verLineRoom: {fileID: 2481854765486437728, guid: d27a69283b3cb459483d2bd890f34193, type: 3}
 --- !u!4 &2127994703
 Transform:
   m_ObjectHideFlags: 0
@@ -445,4 +480,4 @@ SceneRoots:
   - {fileID: 525602289}
   - {fileID: 2096782826}
   - {fileID: 2127994703}
-  - {fileID: 825031790}
+  - {fileID: 1567593230}
