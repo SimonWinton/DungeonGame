@@ -57,128 +57,46 @@ public class RoomSpawner : MonoBehaviour
     //Upon collision with another GameObject
     private void OnTriggerEnter(Collider other)
     {
-        
-        if (other.CompareTag("SpawnPoint"))
-        {
-            if (other.GetComponent<RoomSpawner>().spawned == false && spawned == false)
-            {
-                print("spawning Corner" + other.GetComponent<RoomSpawner>().openingDirection + "," + openingDirection);
-                if ((other.GetComponent<RoomSpawner>().openingDirection == 1 && openingDirection == 2) || (other.GetComponent<RoomSpawner>().openingDirection == 2 && openingDirection == 1))
-                {
+
+        if (other.CompareTag("SpawnPoint")) {
+            if (other.GetComponent<RoomSpawner>().spawned == false && spawned == false) {
+                spawned = true;
+                other.GetComponent<RoomSpawner>().spawned = true;
+                int otherOpeningDirection = other.GetComponent<RoomSpawner>().openingDirection;
+                Destroy(other.gameObject);
+                print("spawning Corner" + otherOpeningDirection + "," + openingDirection);
+                if ((otherOpeningDirection == 1 && openingDirection == 2) || (otherOpeningDirection == 2 && openingDirection == 1)) {
                     print("spawning Vertical Line");
                     Instantiate(templates.verLineRoom, transform.position, templates.verLineRoom.transform.rotation);
                 }
 
-                if ((other.GetComponent<RoomSpawner>().openingDirection == 3 && openingDirection == 4) || (other.GetComponent<RoomSpawner>().openingDirection == 4 && openingDirection == 3))
-                {
+                if ((otherOpeningDirection == 3 && openingDirection == 4) || (otherOpeningDirection == 4 && openingDirection == 3)) {
                     Instantiate(templates.horLineRoom, transform.position, templates.horLineRoom.transform.rotation);
                     print("spawning Hor Line");
                 }
 
-                if ((other.GetComponent<RoomSpawner>().openingDirection == 1 && openingDirection == 3) || (other.GetComponent<RoomSpawner>().openingDirection == 3 && openingDirection == 1))
-                {
+                if ((otherOpeningDirection == 1 && openingDirection == 3) || (otherOpeningDirection == 3 && openingDirection == 1)) {
                     Instantiate(templates.topLeftRoom, transform.position, templates.topLeftRoom.transform.rotation);
-                    print("spawning top left");
+                    print("spawning top left - normally errors");
                 }
 
-                if ((other.GetComponent<RoomSpawner>().openingDirection == 1 && openingDirection == 4) || (other.GetComponent<RoomSpawner>().openingDirection == 4 && openingDirection == 1))
-                {
+                if ((otherOpeningDirection == 1 && openingDirection == 4) || (otherOpeningDirection == 4 && openingDirection == 1)) {
                     Instantiate(templates.topRightRoom, transform.position, templates.topRightRoom.transform.rotation);
                     print("spawning top right");
                 }
 
-                if ((other.GetComponent<RoomSpawner>().openingDirection == 2 && openingDirection == 4) || (other.GetComponent<RoomSpawner>().openingDirection == 4 && openingDirection == 2))
-                {
+                if ((otherOpeningDirection == 2 && openingDirection == 4) || (otherOpeningDirection == 4 && openingDirection == 2)) {
                     Instantiate(templates.bottomRightRoom, transform.position, templates.bottomRightRoom.transform.rotation);
                     print("spawning bottom right");
                 }
 
-                if ((other.GetComponent<RoomSpawner>().openingDirection == 2 && openingDirection == 3) || (other.GetComponent<RoomSpawner>().openingDirection == 3 && openingDirection == 2))
-                {
+                if ((otherOpeningDirection == 2 && openingDirection == 3) || (otherOpeningDirection == 3 && openingDirection == 2)) {
                     Instantiate(templates.bottomLeftRoom, transform.position, templates.bottomLeftRoom.transform.rotation);
                     print("spawning bottom left");
                 }
-
-                
             }
-            Destroy(other.gameObject);
-
         }
         spawned = true;
-        Destroy(gameObject);
-        
+        // Destroy(gameObject);
     }
-
-
-
-
-
-        //            if (other.CompareTag("SpawnPoint") && other.GetComponent<RoomSpawner>().spawned == false && spawned == false)
-        //{
-        //    spawned = true;
-        //    if (other.GetComponent<RoomSpawner>().openingDirection == 1 && openingDirection == 2)
-        //    {
-        //        print("spawning Vertical Line");
-        //        Instantiate(templates.verLineRoom, transform.position, templates.verLineRoom.transform.rotation);
-        //    }
-
-        //    if (other.GetComponent<RoomSpawner>().openingDirection == 1 && openingDirection == 3)
-        //    {
-        //        Instantiate(templates.topLeftRoom, transform.position, templates.topLeftRoom.transform.rotation);
-        //        print("spawning top left");
-        //    }
-        //        print("Other spawn point");
-            //if (other.GetComponent<RoomSpawner>().spawned == false && spawned == false)
-            //{
-            //    spawned = true;
-            //    other.GetComponent<RoomSpawner>().spawned = true;
-            //    Instantiate(templates.topRightRoom, transform.position, templates.topRightRoom.transform.rotation);
-            //}
-        //}
-        //        spawned = true;
-        //if ((other.GetComponent<RoomSpawner>().openingDirection == 1 && openingDirection == 2) || (other.GetComponent<RoomSpawner>().openingDirection == 2 && openingDirection == 1))
-        //{
-        //    print("spawning Vertical Line");
-        //    Instantiate(templates.verLineRoom, transform.position, templates.verLineRoom.transform.rotation);
-        //}
-        //else if ((other.GetComponent<RoomSpawner>().openingDirection == 3 && openingDirection == 4) || (other.GetComponent<RoomSpawner>().openingDirection == 4 && openingDirection == 3))
-        //{
-        //    Instantiate(templates.horLineRoom, transform.position, templates.horLineRoom.transform.rotation);
-        //    print("spawning Hor Line");
-        //}
-        //else if ((other.GetComponent<RoomSpawner>().openingDirection == 1 && openingDirection == 3) || (other.GetComponent<RoomSpawner>().openingDirection == 3 && openingDirection == 1))
-        //{
-        //    Instantiate(templates.topLeftRoom, transform.position, templates.topLeftRoom.transform.rotation);
-        //    print("spawning top left");
-        //}
-        //else if ((other.GetComponent<RoomSpawner>().openingDirection == 1 && openingDirection == 4) || (other.GetComponent<RoomSpawner>().openingDirection == 4 && openingDirection == 1))
-        //{
-        //    Instantiate(templates.topRightRoom, transform.position, templates.topRightRoom.transform.rotation);
-        //    print("spawning top right");
-        //}
-        //else if ((other.GetComponent<RoomSpawner>().openingDirection == 2 && openingDirection == 4) || (other.GetComponent<RoomSpawner>().openingDirection == 4 && openingDirection == 2))
-        //{
-        //    Instantiate(templates.bottomRightRoom, transform.position, templates.bottomRightRoom.transform.rotation);
-        //    print("spawning bottom right");
-        //}
-        //else if ((other.GetComponent<RoomSpawner>().openingDirection == 2 && openingDirection == 3) || (other.GetComponent<RoomSpawner>().openingDirection == 3 && openingDirection == 2))
-        //{
-        //    Instantiate(templates.bottomLeftRoom, transform.position, templates.bottomLeftRoom.transform.rotation);
-        //    print("spawning bottom left");
-        //}
-        //print(other.GetComponent<RoomSpawner>().openingDirection);
-        //print(openingDirection);
-        // print("Equal" + openingDirection == other.GetComponent<RoomSpawner>().openingDirection);
-        //Destroy(gameObject);
-        //    }
-
-        //}
-        //Destroy(gameObject);
-    //}
-
-    //void OnCollisionEnter(Collision collision)
-    //{
-    //    print("OnCollisionEnter");
-    //    Destroy(gameObject);
-    //}
 }

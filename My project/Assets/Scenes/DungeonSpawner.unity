@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641228, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -67,9 +67,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -414,7 +411,6 @@ MonoBehaviour:
   - {fileID: 2449269828999033647, guid: b565d4914ed9e496aac881b324cbe6eb, type: 3}
   - {fileID: 2695084779351240827, guid: 021234512e42149ffbc0857b8f7a4109, type: 3}
   - {fileID: 1866463783311523020, guid: 5fd871568efbd4103a9eb5cf62bb003d, type: 3}
-  - {fileID: 8587757417618940169, guid: 0d11bca5683da4f5fa21a73b0829da16, type: 3}
   - {fileID: 8587757417618940169, guid: e178d48eedf2849f6adaf97f30e8a1e4, type: 3}
   topRooms:
   - {fileID: 8587757417618940169, guid: 836df9fea4d3741399c06e5c04bc69b1, type: 3}
@@ -423,7 +419,6 @@ MonoBehaviour:
   - {fileID: 2874792566191655663, guid: 306b2fc00d96244639b3e09cec994a35, type: 3}
   - {fileID: 2695084779351240827, guid: 021234512e42149ffbc0857b8f7a4109, type: 3}
   - {fileID: 8587757417618940169, guid: 836df9fea4d3741399c06e5c04bc69b1, type: 3}
-  - {fileID: 8587757417618940169, guid: ffaad30aea7ce48b9bb00174f8744272, type: 3}
   - {fileID: 2449269828999033647, guid: b565d4914ed9e496aac881b324cbe6eb, type: 3}
   - {fileID: 2874792566191655663, guid: 306b2fc00d96244639b3e09cec994a35, type: 3}
   - {fileID: 2695084779351240827, guid: 021234512e42149ffbc0857b8f7a4109, type: 3}
@@ -435,7 +430,6 @@ MonoBehaviour:
   - {fileID: 2874792566191655663, guid: 306b2fc00d96244639b3e09cec994a35, type: 3}
   - {fileID: 1866463783311523020, guid: 5fd871568efbd4103a9eb5cf62bb003d, type: 3}
   - {fileID: 8587757417618940169, guid: 80647dc915082455dbb9571338656e4c, type: 3}
-  - {fileID: 8587757417618940169, guid: 798ce437f98a64f5186008e4dce5ae7d, type: 3}
   - {fileID: 2449269828999033647, guid: b565d4914ed9e496aac881b324cbe6eb, type: 3}
   - {fileID: 2874792566191655663, guid: 306b2fc00d96244639b3e09cec994a35, type: 3}
   - {fileID: 1866463783311523020, guid: 5fd871568efbd4103a9eb5cf62bb003d, type: 3}
@@ -447,7 +441,6 @@ MonoBehaviour:
   - {fileID: 2695084779351240827, guid: 021234512e42149ffbc0857b8f7a4109, type: 3}
   - {fileID: 1866463783311523020, guid: 5fd871568efbd4103a9eb5cf62bb003d, type: 3}
   - {fileID: 8587757417618940169, guid: 0efece13c9cda4fe4b7fd077ae9caf15, type: 3}
-  - {fileID: 8587757417618940169, guid: 0d4566125c11f47cbab55e03f68522ab, type: 3}
   - {fileID: 2874792566191655663, guid: 306b2fc00d96244639b3e09cec994a35, type: 3}
   - {fileID: 2695084779351240827, guid: 021234512e42149ffbc0857b8f7a4109, type: 3}
   - {fileID: 1866463783311523020, guid: 5fd871568efbd4103a9eb5cf62bb003d, type: 3}
